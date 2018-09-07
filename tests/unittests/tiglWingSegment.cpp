@@ -171,6 +171,16 @@ TEST_F(WingSegment, tiglGetWingCount_nullPointerArgument)
     ASSERT_TRUE(tiglGetWingCount(tiglHandle, NULL) == TIGL_NULL_POINTER);
 }
 
+/**
+* Tests successfull call of tiglWingGetWingCount.
+*/
+TEST_F(WingSegment, tiglGetWingCount_success)
+{
+    int wingCount;
+    ASSERT_TRUE(tiglGetWingCount(tiglHandle, &wingCount) == TIGL_SUCCESS);
+    ASSERT_TRUE(wingCount == 3);
+}
+
 /***************************************************************************************************/
 
 /**
